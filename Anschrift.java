@@ -1,34 +1,62 @@
-package Passagier;
+package Flugbuchung;
 
-public class Anschrift {
 
-	private String strasse;
-	private int hausnummer;
-	private int plz;
-	private String ort;
+public class Destinationen {
+	
+	 
+	
+	private String abflug;
+	private String ankunft;
+	private double abflugdatum1;
+	private double abflugdatum2;
 
-	public Anschrift(String strasse, int hausnummer, int plz, String ort) {
-		this.strasse = strasse;
-		this.hausnummer = hausnummer;
-		this.plz = plz;
-		this.ort = ort;
+
+
+	
+	public Destinationen(String abflug, String ankunft, double abflugdatum1 ,double abflugdatum2) {
+		super();
+		this.abflug = abflug;
+		this.ankunft = ankunft;
+		this.abflugdatum1 = abflugdatum1;
+		
+		this.abflugdatum2 = abflugdatum2;
+	
+
 	}
 
-	public String getStrasse() {
-		return strasse;
+	public double getAbflugdatum1() {
+		return abflugdatum1;
 	}
 
-	public int getHausnummer() {
-		return hausnummer;
+
+
+	public double getAbflugdatum2() {
+		return abflugdatum2;
 	}
 
-	public int getPlz() {
-		return plz;
+	
+
+	public String getAbflug() {
+		return abflug;
 	}
 
-	public String getOrt() {
-		return ort;
+	public String getAnkunft() {
+		return ankunft;
 	}
 
-}
+	
+	@Override
+	public String toString() {
+		return abflug + " - " + ankunft + " "+ abflugdatum1+" "+abflugdatum2;
+	}
+
+	public String info() {
+		return abflug;
+	}
+	
+			
+	
+		
+		
+	}
 
